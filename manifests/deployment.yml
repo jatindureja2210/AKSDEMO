@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jatindurejaaksdemo 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jatindurejaaksdemo
+  template:
+    metadata:
+      labels:
+        app: jatindurejaaksdemo 
+    spec:
+      containers:
+        - name: jatindurejaaksdemo 
+          image: acrforaksjd.azurecr.io/jatindurejaaksdemo
+          ports:
+          - containerPort: 80
